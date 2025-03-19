@@ -1,32 +1,26 @@
 /* General */
-body {
+ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
-}
-
+    
+} 
 /* Navbar */
 
-    /* CSS previo */
     nav {
-        background-color: #F2F2FD;
-        background-color: rgb(225, 224, 224);
-        position: fixed;
         top: 20px;
         width: 100%;
         z-index: 1000;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
+        padding: 0 20px;
         justify-content: space-between;
-        padding: 0 -20px;
         transition: background-color 0.3s ease;
     }
 
-    nav.scrolled { /* Color sólido cuando se hace scroll hacia abajo */
-        background-color: #F2F2FD;
-        background-color: rgb(225, 224, 224);
+    nav.scrolled {
+        background-color: #6b5b50; /* Color sólido cuando se hace scroll hacia abajo */
     }
 
     nav .menu-icon {
@@ -44,7 +38,6 @@ body {
         display: flex;
         align-items: center;
         transition: max-height 0.3s ease-in-out;
-        max-height: 500px;
         margin-left: auto;
         }
         
@@ -59,7 +52,6 @@ body {
         
 
     nav ul li a {
-        
         display: block;
         padding: 20px 30px;
         color: #fff;
@@ -69,8 +61,7 @@ body {
     }
 
     nav ul li a:hover {
-        background-color: #F2F2FD;
-        background-color: rgb(225, 224, 224);
+        background-color: #ac7e50;
         transform: translateY(-2px);
     }
 
@@ -88,7 +79,7 @@ body {
             flex-direction: column;
             max-height: 0;
             overflow: hidden;
-            width: 100%;
+            width: 90%;
             align-items: flex-end;
         }
         
@@ -98,7 +89,7 @@ body {
         
         nav ul li {
             text-align: right;
-            width: 100%;
+            width: 90%;
         }
     }
 
@@ -106,7 +97,7 @@ body {
 section {
     height: 100vh;
     padding: 2px;
-    padding-top: -20px;
+    padding-top: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,8 +106,7 @@ section {
 }
 
 nav.scrolled {
-    background-color: #F2F2FD;
-    background-color: rgb(225, 224, 224);
+    background-color: #6b5b50; /* Color sólido cuando se hace scroll hacia abajo */
 }
 
 
@@ -152,7 +142,6 @@ nav.scrolled {
 #section3 img {
     max-width: 40%;
     height: auto;
-    margin-top: 20px;
 }
 
 /* Sección 4 - Dónde Comprar */
@@ -171,7 +160,6 @@ nav.scrolled {
 #section4 .map-container {
     width: 100%;
     max-width: 800px;
-    margin: 20px auto;
 }
 
 #section4 iframe {

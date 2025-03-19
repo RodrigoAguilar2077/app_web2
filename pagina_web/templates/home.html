@@ -83,7 +83,7 @@
         <div class="text-content">
             <h1>AUTOPET UTT</h1>
             <p>Tu perro merece lo mejor, y eso incluye una alimentación precisa y constante. Nuestro comedero automático lo hace posible.</p>
-            <a href="#section2-2" class="btn">Saber más</a>
+            <a href="" class="btn">Descarga la app aqui</a>
         </div>
     </div>
 </div>
@@ -93,7 +93,6 @@
     .hero {
         position: relative;
         width: 100%;
-        height: 100vh;
         min-height: 600px;
         overflow: hidden;
     }
@@ -424,24 +423,15 @@
     </section>
     
     <section id="section2-2">
-
-    
     <div class="hero-content2">
         <h1>Tu Título Aquí</h1>
     </div>
-    <div class="content-wrapper2">
-        <div class="text-content2">
-            <p></p>
-        </div>
-    </div>
-    
-
     <div class="content-wrapper2">
         <div class="card">
             <img src="../static/gifs/Monitoreo.gif" alt="Imagen 1">
             <div class="card-content">
                 <h2>Título 1</h2>
-                <p>Monitorio en tiempo real</p>
+                <p>Monitoreo en tiempo real</p>
             </div>
         </div>
         <div class="card">
@@ -451,131 +441,87 @@
                 <p>Programación de comidas</p>
             </div>
         </div>
-
         <div class="card">
-            <img src="../static/gifs/control remoto.gif" alt="Imagen 2">
+            <img src="../static/gifs/control remoto.gif" alt="Imagen 3">
             <div class="card-content">
-                <h2>Título 2</h2>
+                <h2>Título 3</h2>
                 <p>Control remoto</p>
             </div>
         </div>
-
         <div class="card">
-            <img src="../static/gifs/Notificaciones.gif" alt="Imagen 2">
+            <img src="../static/gifs/Notificaciones.gif" alt="Imagen 4">
             <div class="card-content">
-                <h2>Título 2</h2>
+                <h2>Título 4</h2>
                 <p>Notificaciones</p>
             </div>
         </div>
         <div class="card">
-            <img src="../static/gifs/Diseño.gif" alt="Imagen 2">
+            <img src="../static/gifs/Diseño.gif" alt="Imagen 5">
             <div class="card-content">
-                <h2>Título 2</h2>
+                <h2>Título 5</h2>
                 <p>Diseño elegante</p>
             </div>
         </div>
         <div class="card">
-            <img src="../static/gifs/interaccion.gif" alt="Imagen 2">
+            <img src="../static/gifs/interaccion.gif" alt="Imagen 6">
             <div class="card-content">
-                <h2>Título 2</h2>
+                <h2>Título 6</h2>
                 <p>Interacción remota</p>
             </div>
         </div>
-
-        <style>
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-#section2-2{
-    background-color: #eacba9;
-}
-
-
-.hero-content2 {
-    width: 100%;
-    padding: 2rem 1rem;
-    color: white;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 25px;
-    z-index: 1;
-}
-
-.content-wrapper2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem;
-    width: 120%;
-    max-width: 1500px;
-    margin: auto;
-    gap: 1rem;
-}
-
-.text-content2 {
-    width: 120%;
-    color: white;
-    background-color:#F2F2FD;
-    padding: 1rem;
-    border-radius: 9px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: right;
-}
-
-.text-content p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 0rem;
-}
-
-
-.card {
-    position: relative;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card:hover img {
-    transform: scale(1.1);
-}
-
-.card:hover .card-content {
-    transform: translateY(0);
-}
-
-        </style>
     </div>
 
+    <style>
+        #section2-2 {
+            background-color: #eacba9;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .hero-content2 {
+            margin-bottom: 2rem;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 25px;
+        }
+
+        .content-wrapper2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card-content {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+    </style>
 </section>
     
 
@@ -606,15 +552,14 @@ body {
     </div>
     <style>
         body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
 #section3 {
     padding: 7rem;
-    background-color:#FFF6E5
+    background-color:#c7ae80
 
 ;
 }
@@ -630,7 +575,6 @@ body {
 .column {
     flex: 0 0 48%; /* Ancho de cada columna */
     display: flex;
-    flex-direction: column, row;
     gap: 5rem; /* Espacio entre elementos en la columna */
 }
 
@@ -693,7 +637,6 @@ body {
 #section4 {
     padding: 1rem;
     background-color: #F2F2FD;
-    background-color: rgb(225, 224, 224);
 }
 
 .row4 {
