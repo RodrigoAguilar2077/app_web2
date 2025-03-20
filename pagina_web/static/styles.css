@@ -7,26 +7,29 @@
 } 
 /* Navbar */
 
-    nav {
-        top: 20px;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        padding: 0 20px;
-        justify-content: space-between;
-        transition: background-color 0.3s ease;
-    }
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(83, 82, 82, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    background-color: transparent; /* Fondo transparente por defecto */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-    nav.scrolled {
-        background-color: #6b5b50; /* Color sólido cuando se hace scroll hacia abajo */
-    }
-
+nav.scrolled {
+    background-color: #695b4f; /* Fondo crema al hacer scroll */
+    transform: translateY(10px); /* Desplazamiento hacia abajo */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
     nav .menu-icon {
         display: none;
         font-size: 30px;
-        color: white;
+        color: rgb(155, 132, 113);
         cursor: pointer;
         padding: 10px;
     }
@@ -42,7 +45,7 @@
         }
         
         nav ul li.logo img {
-            height: 60px;
+            height: 20px;
             width: auto;
             position: fixed;
             top: 20px;
@@ -51,20 +54,19 @@
         }
         
 
-    nav ul li a {
-        display: block;
-        padding: 20px 30px;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 25px;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    nav ul li a:hover {
-        background-color: #ac7e50;
-        transform: translateY(-2px);
-    }
-
+        nav ul li a {
+            display: block;
+            padding: 20px 30px;
+            color: #eae3de; /* Marrón oscuro */
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #754f26; /* Fondo crema más oscuro al pasar el mouse */
+            transform: translateY(-2px);
+        }
     @media (max-width: 600px) {
         nav {
             flex-direction: column;
@@ -105,16 +107,12 @@ section {
     text-align: center;
 }
 
-nav.scrolled {
-    background-color: #6b5b50; /* Color sólido cuando se hace scroll hacia abajo */
-}
-
 
 /* Sección 1 - Presentación *//* Los elementos deben estar en fila */
 /* Sección 2 - Características del IoT */
 #section2 {
     background: #E7BA8A;
-    color: black;
+    color: rgb(60, 55, 55);
     text-align: center;
     padding: -15px;
 }

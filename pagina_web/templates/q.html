@@ -1,0 +1,733 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOPET UTT</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <nav>
+        <div class="menu-icon">&#9776;</div>
+        <ul>
+            <li class="logo"><img src="../static/img/logo2-removebg-preview (1).png" alt="Logo"></li>
+            <li><a href="#section1">Inicio</a></li>
+            <li><a href="#section2-2">Sobre nosotros</a></li>
+            <li><a href="#section3">Servicios</a></li>
+            <li><a href="#section4">Contacto</a></li>
+        </ul>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let lastScrollTop = 0;
+                const navbar = document.querySelector('nav');
+                
+                window.addEventListener('scroll', function() {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > lastScrollTop) {
+                        // Scroll hacia abajo
+                        navbar.classList.add('scrolled');
+                    } else {
+                        // Scroll hacia arriba
+                        navbar.classList.remove('scrolled');
+                    }
+                    
+                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para evitar valores negativos
+                });
+            });
+        </script>
+    </nav>
+
+    <!-- Sección 1: Presentación -->
+    <section id="section1" class="hero">
+        <!-- Carrusel de imágenes -->
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Perro 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1583511655826-05700442b31b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Perro 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Perro 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Perro 4">
+            </div>
+            
+            <!-- Overlay oscuro para mejorar legibilidad -->
+            <div class="carousel-overlay"></div>
+            
+            <!-- Flechas de navegación -->
+            <button class="carousel-arrow prev">
+                <span class="carousel-arrow-icon"></span>
+            </button>
+            <button class="carousel-arrow next">
+                <span class="carousel-arrow-icon"></span>
+            </button>
+            
+            <!-- Indicadores de diapositivas -->
+            <div class="carousel-indicators">
+                <span class="carousel-indicator active" data-index="0"></span>
+                <span class="carousel-indicator" data-index="1"></span>
+                <span class="carousel-indicator" data-index="2"></span>
+                <span class="carousel-indicator" data-index="3"></span>
+            </div>
+        </div>
+    
+        <!-- Contenido del hero -->
+       <div class="hero-content">
+    <div class="content-wrapper">
+        <div class="text-content">
+            <h1>AUTOPET UTT</h1>
+            <p>Tu perro merece lo mejor, y eso incluye una alimentación precisa y constante. Nuestro comedero automático lo hace posible.</p>
+            <a href="" class="btn">Descarga la app aqui</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Estilos para la sección hero con carrusel */
+    .hero {
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        overflow: hidden;
+        background-color: #636363; /* Fondo crema claro */
+    }
+    /* Estilos del carrusel */
+    .carousel-overlay {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(56, 55, 55, 0.6); /* Overlay blanco translúcido */
+        z-index: 2;
+    }
+
+    /* Overlay oscuro independiente */
+    .carousel-overlay {
+        position:relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6); /* Overlay más oscuro */
+        z-index: 2;
+    }
+
+    .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgb(165, 165, 165);
+        transition: opacity 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    .carousel-slide.active {
+        opacity: 1;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        background-color: rgba(110, 99, 99, 0.8); /* Fondo blanco translúcido */
+        color: #b9b8b7; 
+        border: none;
+        border-radius: 50%;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.3s;
+    }
+
+    .carousel-arrow:hover {
+        background-color: rgb(0, 0, 0); /* Fondo blanco sólido */
+    }
+
+    .carousel-arrow.prev {
+        left: 20px;
+    }
+
+    .carousel-arrow.next {
+        right: 20px;
+    }
+
+    .carousel-arrow-icon {
+        width: 20px;
+        height: 20px;
+        border-top: 4px solid white;
+        border-right: 4px solid white;
+        display: inline-block;
+    }
+
+    .prev .carousel-arrow-icon {
+        transform: rotate(-135deg);
+    }
+
+    .next .carousel-arrow-icon {
+        transform: rotate(45deg);
+    }
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+
+    .carousel-indicator {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(201, 194, 189, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .carousel-indicator.active {
+        background-color: #5a4a3f; /* Marrón oscuro */
+    }
+
+    /* Estilos del contenido del hero */
+    .hero-content {
+        /* position: absolute; */
+        top: 0px;
+        width: 5px;
+        height: 100%;
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        z-index: 5;
+    }
+
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: -20%;
+        max-width: 10px;
+        padding: 0 1rem;
+    }
+
+    .text-content {
+        max-width: 500px;
+        color: #eddcd1d6; /* Texto marrón oscuro */
+        text-align: center;
+    }
+
+    .text-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .text-content p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        line-height: 1.8;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 1rem 2.5rem;
+        background-color: #f4e3d0; /* Botón crema */
+        color: #5a4a3f; /* Texto marrón oscuro */
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .btn:hover {
+        background-color: #e8d5c0; /* Botón crema más oscuro */
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 100px) {
+        .content-wrapper {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .dispensador-img {
+            max-width: 60%;
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+
+        .text-content h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .text-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+        }
+
+        .carousel-arrow {
+            width: 50px;
+            height: 50px;
+        }
+
+        .carousel-arrow-icon {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .dispensador-img {
+            max-width: 80%;
+        }
+
+        .text-content h1 {
+            font-size: 2rem;
+        }
+
+        .text-content p {
+            font-size: 1rem;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+        }
+
+        .carousel-arrow {
+            width: 40px;
+            height: 40px;
+        }
+
+        .carousel-arrow-icon {
+            width: 14px;
+            height: 14px;
+        }
+    }
+</style>
+
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Elementos del carrusel
+                const slides = document.querySelectorAll('.carousel-slide');
+                const prevButton = document.querySelector('.carousel-arrow.prev');
+                const nextButton = document.querySelector('.carousel-arrow.next');
+                const indicators = document.querySelectorAll('.carousel-indicator');
+                
+                let currentIndex = 0;
+                const totalSlides = slides.length;
+                
+                // Función para mostrar una diapositiva específica
+                function showSlide(index) {
+                    // Ocultar todas las diapositivas
+                    slides.forEach(slide => {
+                        slide.classList.remove('active');
+                    });
+                    
+                    // Desactivar todos los indicadores
+                    indicators.forEach(indicator => {
+                        indicator.classList.remove('active');
+                    });
+                    
+                    // Mostrar la diapositiva actual
+                    slides[index].classList.add('active');
+                    
+                    // Activar el indicador actual
+                    indicators[index].classList.add('active');
+                    
+                    // Actualizar el índice actual
+                    currentIndex = index;
+                }
+                
+                // Función para ir a la siguiente diapositiva
+                function nextSlide() {
+                    let newIndex = (currentIndex + 1) % totalSlides;
+                    showSlide(newIndex);
+                }
+                
+                // Función para ir a la diapositiva anterior
+                function prevSlide() {
+                    let newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    showSlide(newIndex);
+                }
+                
+                // Event listeners para los botones
+                prevButton.addEventListener('click', prevSlide);
+                nextButton.addEventListener('click', nextSlide);
+                
+                // Event listeners para los indicadores
+                indicators.forEach(indicator => {
+                    indicator.addEventListener('click', function() {
+                        const slideIndex = parseInt(this.getAttribute('data-index'));
+                        showSlide(slideIndex);
+                    });
+                });
+                
+                // Autoplay (opcional)
+                let autoplayInterval = setInterval(nextSlide, 5000);
+                
+                // Detener autoplay al interactuar
+                const carouselContainer = document.querySelector('.carousel-container');
+                carouselContainer.addEventListener('mouseenter', () => {
+                    clearInterval(autoplayInterval);
+                });
+                
+                carouselContainer.addEventListener('mouseleave', () => {
+                    autoplayInterval = setInterval(nextSlide, 5000);
+                });
+                
+                // Navegación con teclado
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'ArrowLeft') {
+                        prevSlide();
+                    } else if (e.key === 'ArrowRight') {
+                        nextSlide();
+                    }
+                });
+            });
+        </script>
+    </section>
+    
+    <section id="section2-2">
+    <div class="hero-content2">
+        <h1>Tu Título Aquí</h1>
+    </div>
+    <div class="content-wrapper2">
+        <div class="card">
+            <img src="../static/gifs/Monitoreo.gif" alt="Imagen 1">
+            <div class="card-content">
+                <h2>Título 1</h2>
+                <p>Monitoreo en tiempo real</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/gifs/programacion_de_alimento.gif" alt="Imagen 2">
+            <div class="card-content">
+                <h2>Título 2</h2>
+                <p>Programación de comidas</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/gifs/control remoto.gif" alt="Imagen 3">
+            <div class="card-content">
+                <h2>Título 3</h2>
+                <p>Control remoto</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/gifs/Notificaciones.gif" alt="Imagen 4">
+            <div class="card-content">
+                <h2>Título 4</h2>
+                <p>Notificaciones</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/gifs/Diseño.gif" alt="Imagen 5">
+            <div class="card-content">
+                <h2>Título 5</h2>
+                <p>Diseño elegante</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../static/gifs/interaccion.gif" alt="Imagen 6">
+            <div class="card-content">
+                <h2>Título 6</h2>
+                <p>Interacción remota</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+         #section2-2 {
+        background-color: #f8f3eb; /* Fondo crema claro */
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .hero-content2 {
+        margin-bottom: 2rem;
+        color: #5a4a3f; /* Texto marrón oscuro */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 25px;
+    }
+
+        .content-wrapper2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid #e8d5c0; /* Borde crema */
+            background-color: #fff; /* Fondo blanco */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card-content {
+            padding: 1rem;
+            text-align: center;
+            color: #5a4a3f;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</section>
+    
+
+    <!-- Sección 3: Aplicación Móvil -->
+<section id="section3">
+    <h2>Aplicación Móvil</h2>
+    <div class="row">
+        <div class="column">
+            <img src="../static/img/cap1.jpg" alt="App Móvil 1">
+            <p>Descripción de la imagen 1</p>
+        </div>
+        <div class="column">
+            <img src="../static/img/cap2.jpg"alt="App Móvil 3">
+            <p>Descripción de la imagen 3</p>
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="../static/img/cap3.jpg" alt="App Móvil 1">
+            <p>Descripción de la imagen 1</p>
+        </div>
+        <div class="column">
+            <img src="../static/img/cap4.jpg" alt="App Móvil 3">
+            <p>Descripción de la imagen 3</p>
+            <br>
+        </div>
+    </div>
+    <style>
+        body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+}
+
+#section3 {
+    padding: 7rem;
+    background-color: #f4e3d0; /* Fondo crema */
+    color: #5a4a3f;
+
+;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    top: 10px;
+    height: 4; /* Espacio entre las columnas */
+}
+
+.column {
+    flex: 0 0 48%; /* Ancho de cada columna */
+    display: flex;
+    gap: 5rem; /* Espacio entre elementos en la columna */
+}
+
+.column img {
+    width: 20%;
+    height: 80;
+    border-radius: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.column p {
+    font-size: 1.5rem;
+    line-height: 5;
+    color: #333;
+    /* font-family: ; */
+    background-color: #e8daa8; /* Fondo amarillo para el texto */
+    padding: 4rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+</section>
+
+
+<!-- Sección 4: Dónde Comprar -->
+<section id="section4">
+    <h2>¿Dónde Comprar?</h2>
+    <p>Puedes adquirir AUTOPET UTT en tiendas autorizadas o en línea.</p>
+    <div class="row4">
+        <div class="column-left">
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="column-right">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509369!2d144.95592831531792!3d-37.81720997975162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce7e33!2sMelbourne%20CBD%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1604894111236!5m2!1sen!2s" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+#section4 {
+        background-color: #f8f3eb; /* Fondo crema claro */
+        color: #5a4a3f; /* Texto marrón oscuro */
+    }
+
+
+.row4 {
+    display: flex;
+    justify-content: space-between, row;
+    gap: 15rem; /* Espacio entre las columnas */
+}
+
+.column-left {
+    flex: 20 0 50%;
+     /* Ancho de la columna izquierda */
+}
+
+.column-right {
+    flex: 0 0 50%; /* Ancho de la columna derecha */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre los elementos del formulario */
+}
+
+label {
+    font-weight: bolder;
+    color: #333;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #FFD166;
+    color: #171616;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFA500;
+}
+
+#map {
+    width: 100%;
+    height: -300%;
+}
+
+
+
+    </style>
+</section>
+
+
+    <footer>
+        <p>© 2024 AUTOPET UTT</p>
+
+        <style>
+            footer {
+            background-color: #f4e3d0; /* Fondo crema */
+            color: #5a4a3f; /* Texto marrón oscuro */
+        }
+        </style>
+
+
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('menu').classList.remove('show'); // Cierra el menú en móviles
+            });
+        });
+    </script>
+
+</body>
+</html>

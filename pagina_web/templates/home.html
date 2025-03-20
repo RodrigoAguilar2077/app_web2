@@ -14,7 +14,8 @@
         <ul>
             <li class="logo"><img src="../static/img/logo2-removebg-preview (1).png" alt="Logo"></li>
             <li><a href="#section1">Inicio</a></li>
-            <li><a href="#section2-2">Sobre nosotros</a></li>
+            <li><a href="#section2-2">Nuestro Producto</a></li>
+            <li><a href="#section-download">Descarga</a></li>
             <li><a href="#section3">Servicios</a></li>
             <li><a href="#section4">Contacto</a></li>
         </ul>
@@ -83,7 +84,7 @@
         <div class="text-content">
             <h1>AUTOPET UTT</h1>
             <p>Tu perro merece lo mejor, y eso incluye una alimentación precisa y constante. Nuestro comedero automático lo hace posible.</p>
-            <a href="" class="btn">Descarga la app aqui</a>
+            <a href="#section-download" class="btn">Descarga la app aqui</a>
         </div>
     </div>
 </div>
@@ -232,43 +233,39 @@
 
     .text-content {
         max-width: 500px;
-        color: white;
+        color: #eddcd1d6; /* Texto marrón oscuro */
         text-align: center;
     }
 
     .text-content h1 {
         font-size: 3.5rem;
-        margin-bottom:10px;
-        top: 20px;
-        text-shadow: 3px 5px 6px rgba(0, 0, 0, 0.8);
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         font-weight: bold;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-
     .text-content p {
-        font-size: 2.5rem;
-        margin-bottom: 5px;
-        text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.8);
-        line-height: 5;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        line-height: 1.8;
     }
 
     .btn {
         display: inline-block;
         padding: 1rem 2.5rem;
-        background-color: #FFD166;
-        color: #333;
+        background-color: #f4e3d0; /* Botón crema */
+        color: #5a4a3f; /* Texto marrón oscuro */
         text-decoration: none;
         border-radius: 30px;
         font-weight: bold;
         font-size: 1.1rem;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-
     .btn:hover {
-        background-color: #FFC233;
+        background-color: #e8d5c0; /* Botón crema más oscuro */
         transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
     /* Responsive */
@@ -422,199 +419,492 @@
         </script>
     </section>
     
+    
     <section id="section2-2">
-    <div class="hero-content2">
-        <h1>Tu Título Aquí</h1>
-    </div>
-    <div class="content-wrapper2">
-        <div class="card">
-            <img src="../static/gifs/Monitoreo.gif" alt="Imagen 1">
-            <div class="card-content">
-                <h2>Título 1</h2>
-                <p>Monitoreo en tiempo real</p>
+        <div class="content-wrapper2">
+            <div class="legend">
+                <h2>Observa todo lo que puedes hacer<p>desde tu trabajo o tus vacaciones de ensueño</p></h2>
+            </div>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="../static/gifs/Monitoreo.gif" alt="Imagen 1">
+                    <div class="card-content">
+                        <h2><p>Monitoreo</p> en tiempo real</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../static/gifs/programacion_de_alimento.gif" alt="Imagen 2">
+                    <div class="card-content">
+                        <h2><p>Programación </p>de comidas</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../static/gifs/control remoto.gif" alt="Imagen 3">
+                    <div class="card-content">
+                        <h2>Control remoto</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../static/gifs/Notificaciones.gif" alt="Imagen 4">
+                    <div class="card-content">
+                        <h2>Notificaciones</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../static/gifs/Diseño.gif" alt="Imagen 5">
+                    <div class="card-content">
+                        <h2>Diseño elegante</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../static/gifs/interaccion.gif" alt="Imagen 6">
+                    <div class="card-content">
+                        <h2>Interacción remota</h2>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <img src="../static/gifs/programacion_de_alimento.gif" alt="Imagen 2">
-            <div class="card-content">
-                <h2>Título 2</h2>
-                <p>Programación de comidas</p>
+    
+        <style>
+            #section2-2 {
+                background-color: #f8f3eb; /* Fondo crema claro */
+                padding: 2rem 0;
+                text-align: center;
+            }
+    
+            .content-wrapper2 {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 0 auto;
+                padding: 7rem;
+            }
+    
+            .legend {
+                flex: 1;
+                padding: 1rem;
+                color: #5a4a3f; /* Texto marrón oscuro */
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 5px;
+                text-align: left;
+                margin-top: 5rem; /* Ajusta esta propiedad para mover el texto hacia abajo */
+}
+    
+            .cards-container {
+                flex: 2;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+    
+            .card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                border: 2px solid #e8d5c0; /* Borde crema */
+                background-color: #fff; /* Fondo blanco */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                width: 250px; /* Ancho inicial de la tarjeta */
+                height: 220px; /* Alto inicial de la tarjeta */
+            }
+    
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+            }
+    
+            .card-content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 1rem;
+                text-align: center;
+                color: #5a4a3f;
+                background: rgba(226, 224, 224, 0.8);
+                transition: opacity 0.3s ease;
+                opacity: 0;
+            }
+    
+            .card:hover {
+                transform: scale(1.05);
+                width: 300px; /* Ancho desplegado de la tarjeta */
+                height: 300px; /* Alto desplegado de la tarjeta */
+            }
+    
+            .card:hover img {
+                transform: scale(1.1);
+                width: 100%;
+                height: 100%;
+            }
+    
+            .card:hover .card-content {
+                opacity: 1;
+            }
+        </style>
+    </section>
+
+
+    <section id="section-download">
+        <div class="download-container">
+            <h2 class="2-2">Que la alimentacion de tu mascota no te impida divertirte,<p></p> descarga nuestra app  y disfruta los beneficios</h2>
+            <button class="download-button">Da clik y descarga nuestra app</button>
+    
+            <!-- Carrusel de imágenes -->
+            <div class="carousel-container3">
+                <div class="carousel-track3">
+                    <div class="carousel-slide3">
+                        <img src="../static/img/Untitled.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/perro.jpg"alt="Imagen 2">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/kirara.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/perro.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/kirara.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/perro.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/kirara.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/perro.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/kirara.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/perro.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/kirara.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/perro.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="carousel-slide3">
+                        <img src="../static/img/kirara.jpg" alt="Imagen 1">
+                    </div>
+                </div>
+                <!-- Botones de navegación -->
+                <button class="carousel-button prev3">&#10094;</button>
+                <button class="carousel-button next3">&#10095;</button>
             </div>
         </div>
-        <div class="card">
-            <img src="../static/gifs/control remoto.gif" alt="Imagen 3">
-            <div class="card-content">
-                <h2>Título 3</h2>
-                <p>Control remoto</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/gifs/Notificaciones.gif" alt="Imagen 4">
-            <div class="card-content">
-                <h2>Título 4</h2>
-                <p>Notificaciones</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/gifs/Diseño.gif" alt="Imagen 5">
-            <div class="card-content">
-                <h2>Título 5</h2>
-                <p>Diseño elegante</p>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/gifs/interaccion.gif" alt="Imagen 6">
-            <div class="card-content">
-                <h2>Título 6</h2>
-                <p>Interacción remota</p>
-            </div>
-        </div>
-    </div>
+    
+        <style>
+            /* Estilo general */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #91b5e6; /* Fondo azul */
+                color: #ffffff;
+            }
+    
+            #section-download {
+                padding: 3rem 1rem;
+                text-align: center;
+                background-color: #ceb279;
+            }
+    
+            .h2-2-2{
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #331818;
+                font-weight: 700;
+            }
+    
+            /* Estilo del botón */
+            .download-button {
+                padding: 0.7rem 2rem;
+                background-color: #ffffff;
+                color: #1E4D8B;
+                border: none;
+                border-radius: 30px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                margin-bottom: 2rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .download-button:hover {
+                background-color: #f1f1f1;
+            }
+    
+            /* Carrusel */
+            .carousel-container3 {
+                position: relative;
+        overflow: hidden;
+        width: 90%; 
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-    <style>
-        #section2-2 {
-            background-color: #eacba9;
-            padding: 2rem 0;
-            text-align: center;
-        }
+    .carousel-track3 {
+        display: flex;
+        transition: transform 0.5s ease;
+        gap: 2cm; /* Espaciado entre imágenes */
+    }
 
-        .hero-content2 {
-            margin-bottom: 2rem;
-            color: white;
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 25px;
-        }
+    .carousel-slide3 {
+        min-width: 20%; /* Ajustar el tamaño de las imágenes */
+        box-sizing: border-box;
+        padding: 0.5rem;
+    }
 
-        .content-wrapper2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            margin: 0 auto;
-            padding: 1rem;
-        }
-
-        .card {
-            position: relative;
-            overflow: hidden;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .card-content {
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        .card:hover img {
-            transform: scale(1.1);
-        }
-    </style>
-</section>
+    .carousel-slide3 img {
+        width: 130%;
+        height: 250px; /* Reducir la altura de las imágenes */
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+            /* Botones de navegación */
+            .carousel-button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(255, 255, 255, 0.7);
+                color: #1E4D8B;
+                border: none;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                z-index: 10;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+    
+            .carousel-button:hover {
+                background-color: #ffffff;
+            }
+    
+            .carousel-button.prev3 {
+                left: 10px;
+            }
+    
+            .carousel-button.next3 {
+                right: 10px;
+            }
+        </style>
+    
+    <script>
+        // Carrusel funcionalidad
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.carousel-track3');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('.carousel-button.next3');
+            const prevButton = document.querySelector('.carousel-button.prev3');
+            const slideWidth = slides[0].getBoundingClientRect().width;
+    
+            let currentIndex = 0;
+    
+            // Función para mover el carrusel
+            const moveToSlide = (index) => {
+                track.style.transform = `translateX(-${(slideWidth + 32) * index}px)`; // Ajuste para incluir el gap
+                currentIndex = index;
+            };
+    
+            // Evento para el botón "next"
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    moveToSlide(currentIndex + 1);
+                } else {
+                    moveToSlide(0); // Regresar al inicio
+                }
+            });
+    
+            // Evento para el botón "prev"
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    moveToSlide(currentIndex - 1);
+                } else {
+                    moveToSlide(slides.length - 1); // Ir al final
+                }
+            });
+    
+            // Ajustar el tamaño de las diapositivas dinámicamente
+            const setSlidePositions = () => {
+                slides.forEach((slide, index) => {
+                    slide.style.left = `${(slideWidth + 32) * index}px`; // Ajuste para incluir el gap
+                });
+            };
+    
+            setSlidePositions();
+            window.addEventListener('resize', () => {
+                setSlidePositions();
+            });
+        });
+    </script>
+    </section>
     
 
-    <!-- Sección 3: Aplicación Móvil -->
-<section id="section3">
-    <h2>Aplicación Móvil</h2>
-    <div class="row">
-        <div class="column">
-            <img src="../static/img/cap1.jpg" alt="App Móvil 1">
-            <p>Descripción de la imagen 1</p>
+    
+
+    <!-- Sección 3: Aplicación Móvil -->
+    <section id="section3">
+        <h2>Nuestra App</h2>
+        <p>Con nuestra app puedes crear, actualizar, editar los horarios de comida para que tu mascota,  de igual manera pueda comer con con una dieta balanceada de acuerdo a su tamaño </p>
+        <div class="grid">
+            <div class="item">
+                <img src="../static/img/cap1.jpg" alt="App Móvil 1">
+                <div class="text">
+                    <h3>Menu con 5 Opciones</h3>
+                    <span> donde podras monitorear la, dieta, los horarios o podras opservar el perfl de tu mascota</span> <br>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h3>Registro de Mascotas</h3>
+                    <span>En este apartado podras registrar a tu mascota con sus datos importantes como su nombre, edad y sus demas datos importantes</span> <br>
+                </div>
+                <img src="../static/img/cap2.jpg" alt="App Móvil 3">
+            </div>
+            <div class="item">
+                <img src="../static/img/cap4.jpg" alt="App Móvil 1">
+                <div class="text">
+                    <h3>Registro de Dieta Personal</h3>
+                    <span>En este apartado podras agregar la dieta que deseas que lleve tu peludito, ya basado a su edad, el tipo de croqueta, el tamaño y su peso para que pueda tener una dieta balanceada y saludable y tener feliz a su pansita  </span> <br>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h3>Registro de Horario</h3>
+                    <span>En este apartado podras agregar horarios de comida donde el dispensador actuara deacuerdo al horario de comida programado desde la aplicacion</span> <br>
+                </div>
+                <img src="../static/img/cap3.jpg" alt="App Móvil 3">
+            </div>
         </div>
-        <div class="column">
-            <img src="../static/img/cap2.jpg"alt="App Móvil 3">
-            <p>Descripción de la imagen 3</p>
-            <br>
-        </div>
-    </div>
-    <div class="row">
-        <div class="column">
-            <img src="../static/img/cap3.jpg" alt="App Móvil 1">
-            <p>Descripción de la imagen 1</p>
-        </div>
-        <div class="column">
-            <img src="../static/img/cap4.jpg" alt="App Móvil 3">
-            <p>Descripción de la imagen 3</p>
-            <br>
-        </div>
-    </div>
-    <style>
-        body {
-    /* font-family: Arial, sans-serif; */
-    margin: 0;
-    padding: 0;
-}
+    
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f4e3d0;
+            }
+    
+            #section3 {
+                padding: 4rem;
+                color: #5a4a3f;
+            }
+    
+            h2 {
+                font-size: 1.8rem;
+                text-align: center;
+                margin-bottom: 3rem;
+                color: #5a4a3f;
+            }
+    
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+    
+            .item {
+                display: flex;
+                background-color: #fff;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                height: 240px;
+            }
+    
+            .item img {
+                width: 40%;
+                height: 100%;
+                object-fit: cover;
+            }
+    
+            .text {
+                padding: 1.5rem;
+                background-color: #e8daa8;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #333;
+                width: 60%;
+            }
+    
+            .text h3 {
+                font-size: 1.8rem;
+                color: #1c1c1c;
+                margin-bottom: 0.5rem;
+            }
+    
+            .text p {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+                color: #444;
+            }
+    
+            .text span {
+                font-size: 1rem;
+                color: #555;
+            }
+    
+            .text strong {
+                font-size: 1.1rem;
+                font-weight: bold;
+                color: #222;
+            }
+        </style>
+    </section>
+    
 
-#section3 {
-    padding: 7rem;
-    background-color:#c7ae80
 
-;
-}
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-    top: 10px;
-    height: 4; /* Espacio entre las columnas */
-}
-
-.column {
-    flex: 0 0 48%; /* Ancho de cada columna */
-    display: flex;
-    gap: 5rem; /* Espacio entre elementos en la columna */
-}
-
-.column img {
-    width: 20%;
-    height: 80;
-    border-radius: 1px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.column p {
-    font-size: 1.5rem;
-    line-height: 5;
-    color: #333;
-    /* font-family: ; */
-    background-color: #e8daa8; /* Fondo amarillo para el texto */
-    padding: 4rem;
-    border-radius: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-    </style>
-</section>
-
-
-<!-- Sección 4: Dónde Comprar -->
+<!-- Sección 4: Dónde Comprar -->
 <section id="section4">
-    <h2>¿Dónde Comprar?</h2>
-    <p>Puedes adquirir AUTOPET UTT en tiendas autorizadas o en línea.</p>
+    <h2>Contacto</h2>
+    <div class="contact-info">
+        <div class="info-item">
+            <h3>Teléfono</h3>
+            <p>+52-1-33-12345678</p>
+        </div>
+        <div class="info-item">
+            <h3>Email</h3>
+            <p>info@misitio.com</p>
+        </div>
+        <div class="info-item">
+            <h3>Horario de trabajo</h3>
+            <p>Lun - Vie: 9:00 - 20:00<br>Sábado: 9:00 - 16:00</p>
+        </div>
+        <div class="info-item">
+            <h3>Ubicacion fisica</h3>
+            <p>Carmen Xalpatlahuayac, Universidad tecnologica de tlaxcala</p>
+        </div>
+    </div>
     <div class="row4">
         <div class="column-left">
-            <form>
+            <form method="POST" action="{% url 'enviarcorreo' %}">
+                {% csrf_token %}
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="asunto" required>
                 
                 <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="correo" required>
                 
                 <label for="message">Mensaje:</label>
-                <textarea id="message" name="message"></textarea>
+                <textarea id="message" name="mensaje" required></textarea>
                 
                 <button type="submit">Enviar</button>
             </form>
@@ -625,9 +915,8 @@
             </div>
         </div>
     </div>
-
     <style>
-        body {
+body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -635,44 +924,93 @@
 }
 
 #section4 {
-    padding: 1rem;
-    background-color: #F2F2FD;
+    background-image: url('../static/img/perro2.jpg'); /* Fondo azul */
+    color: #ffffff; /* Texto blanco */
+    padding: 3rem 1rem;
+    text-align: center;
+    position: relative;
+    
+}
+#section4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscuro para contraste */
+    z-index: 1;
+}
+
+#section4 h2, .contact-info, .row4 {
+    position: relative;
+    z-index: 2;
+}
+
+#section4 h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #f2f1ef
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    flex: 1;
+    margin: 0 1rem;
+}
+
+.info-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-size: 1.2rem;
 }
 
 .row4 {
     display: flex;
-    justify-content: space-between, row;
-    gap: 15rem; /* Espacio entre las columnas */
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 .column-left {
-    flex: 20 0 50%;
-     /* Ancho de la columna izquierda */
+    flex: 1; /* Incrementa el ancho de la columna izquierda */
 }
 
 .column-right {
-    flex: 0 0 50%; /* Ancho de la columna derecha */
+    flex: 1;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Espacio entre los elementos del formulario */
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco */
+    padding: 2rem;
+    border-radius: 8px;
+    color: #060a16; /* Texto azul */
 }
 
-label {
-    font-weight: bolder;
-    color: #333;
+form label {
+    font-weight: bold;
+    color: #101a33; /* Texto azul */
 }
 
-input, textarea {
+form input, form textarea {
     width: 100%;
     padding: 0.5rem;
-    border: 1px solid #000000;
+    border: 1px solid #2a4d9c; /* Borde azul */
     border-radius: 4px;
+    color: #2a4d9c; /* Texto azul */
 }
 
-button {
+form button {
     padding: 0.5rem 1rem;
     background-color: #FFD166;
     color: #171616;
@@ -683,23 +1021,29 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+form button:hover {
     background-color: #FFA500;
 }
 
 #map {
     width: 100%;
-    height: -300%;
+    height: 400px;
+    border-radius: 8px;
 }
-
-
-
-    </style>
+        </style>
 </section>
-
 
     <footer>
         <p>© 2024 AUTOPET UTT</p>
+
+        <style>
+            footer {
+            background-color: #093c80; /* Fondo crema */
+            color: #fdf8f6; /* Texto marrón oscuro */
+        }
+        </style>
+
+
     </footer>
 
     <script>
@@ -714,7 +1058,7 @@ button:hover {
                 const targetId = this.getAttribute('href').substring(1);
                 const targetElement = document.getElementById(targetId);
                 targetElement.scrollIntoView({ behavior: 'smooth' });
-                document.getElementById('menu').classList.remove('show'); // Cierra el menú en móviles
+                document.getElementById('menu').classList.remove('show'); // Cierra el menú en móviles
             });
         });
     </script>
